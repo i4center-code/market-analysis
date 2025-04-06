@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحلیلگر بازار</title>
+    <style>
+        body { font-family: Tahoma; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .input-group { display: flex; margin: 20px 0; }
+        #symbol-input { flex: 1; padding: 10px; }
+        #analyze-btn { padding: 10px 20px; background: #4CAF50; color: white; border: none; }
+        #analysis-result { margin-top: 20px; padding: 15px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>تحلیلگر ساده بازار</h1>
+    <div class="input-group">
+        <input type="text" id="symbol-input" placeholder="مثلاً: gold یا btc">
+        <button id="analyze-btn">تحلیل کن</button>
+    </div>
+    <div id="analysis-result">نماد را وارد کنید و تحلیل را دریافت کنید</div>
+
+    <script>
+        document.getElementById('analyze-btn').addEventListener('click', function() {
+            const symbol = document.getElementById('symbol-input').value;
+            document.getElementById('analysis-result').innerHTML = 
+                `تحلیل نمونه برای ${symbol}: روند صعودی - حمایت: 1900 - مقاومت: 2100`;
+        });
+    </script>
+</body>
+</html>
